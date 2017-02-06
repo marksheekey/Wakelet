@@ -7,38 +7,123 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="uk.co.happyapper.wakelet.MainActivity">
+<RelativeLayout
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/appbar_padding_top"
-        android:theme="@style/AppTheme.AppBarOverlay">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
-
-        </android.support.v7.widget.Toolbar>
-
-    </android.support.design.widget.AppBarLayout>
+  <ImageView
+      android:layout_centerHorizontal="true"
+      android:id="@+id/main_header"
+      android:src="@drawable/wakelet_blue"
+      android:layout_width="100dp"
+      android:scaleType="centerInside"
+      android:layout_height="50dp" />
 
     <android.support.v4.view.ViewPager
+        android:layout_below="@id/main_header"
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#33b5e5"
+            android:textColor="#fff"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+    </android.support.v4.view.ViewPager>
+
+
+
+</RelativeLayout>
+
+    <RadioGroup
+        android:layout_gravity="center|bottom"
+        android:background="@android:color/white"
+        android:id="@+id/group_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <RadioButton
+            android:textSize="8dp"
+            android:id="@+id/main_home"
+            style="@style/main_radio_style"
+            android:drawableTop="@drawable/home"
+            android:text="Home"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            />
+
+        <RadioButton
+            android:textSize="8dp"
+            android:id="@+id/main_search"
+            style="@style/main_radio_style"
+            android:drawableTop="@drawable/search"
+            android:text="Search"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            />
+
+        <RadioButton
+            style="@style/main_radio_style"
+            android:text=""/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            />
+        <RadioButton
+            android:textSize="8dp"
+            android:id="@+id/main_explore"
+            style="@style/main_radio_style"
+            android:text="Explore"
+            android:drawableTop="@drawable/explore"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            />
+
+        <RadioButton
+            android:textSize="8dp"
+            android:id="@+id/main_me"
+            style="@style/main_radio_style"
+            android:text="Me"
+            android:drawableTop="@drawable/me"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            />
+    </RadioGroup>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:layout_gravity="center|bottom"
+        android:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/plus_symbol" />
 
 </android.support.design.widget.CoordinatorLayout>
