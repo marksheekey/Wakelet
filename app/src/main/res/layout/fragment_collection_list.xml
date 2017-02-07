@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<ImageView
+    android:src="@drawable/wakelet_blue"
+    android:id="@+id/collection_head"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_alignBottom="@id/collection_head"
+        android:layout_centerHorizontal="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/thumb_nail"
+        android:background="@drawable/profile0"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+    </RelativeLayout>
 <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,3 +38,4 @@
     tools:context="uk.co.happyapper.wakelet.CollectionFragment"
     tools:listitem="@layout/fragment_collection" />
 
+</LinearLayout>
