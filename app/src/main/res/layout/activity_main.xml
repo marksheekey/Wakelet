@@ -7,32 +7,12 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="uk.co.happyapper.wakelet.MainActivity">
-<RelativeLayout
 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <RelativeLayout
 
-  <ImageView
-      android:layout_centerHorizontal="true"
-      android:id="@+id/main_header"
-      android:src="@drawable/wakelet_blue"
-      android:layout_width="100dp"
-      android:scaleType="centerInside"
-      android:layout_height="50dp" />
-
-    <android.support.v4.view.ViewPager
-        android:layout_below="@id/main_header"
-        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="wrap_content">
 
-
-    </android.support.v4.view.ViewPager>
-
-
-
-</RelativeLayout>
 
     <RadioGroup
         android:layout_gravity="center|bottom"
@@ -106,7 +86,29 @@
             />
     </RadioGroup>
 
-    <android.support.design.widget.FloatingActionButton
+
+
+  <ImageView
+
+      android:layout_centerHorizontal="true"
+      android:id="@+id/main_header"
+      android:src="@drawable/wakelet_blue"
+      android:layout_width="100dp"
+      android:scaleType="centerInside"
+      android:layout_height="50dp" />
+
+  <FrameLayout
+      android:layout_above="@id/group_menu"
+      android:id="@+id/container"
+      android:layout_below="@id/main_header"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+  </FrameLayout>
+
+</RelativeLayout>
+
+      <android.support.design.widget.FloatingActionButton
         android:layout_gravity="center|bottom"
 
         app:fabSize="normal"
